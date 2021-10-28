@@ -93,6 +93,7 @@ public class forgot_pass extends javax.swing.JFrame {
         if(secret.equals("admin@school123"))
         {
             JOptionPane.showMessageDialog(this,"Username is 'admin' and password is 'admin'");
+            dispose();
         }
         else
         {

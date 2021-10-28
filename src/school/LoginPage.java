@@ -95,6 +95,7 @@ public class LoginPage extends javax.swing.JFrame {
                 if(un.equals(username) && p.equals(password))
                 {
                     new hello().setVisible(true);
+                    dispose();
                 }
                 else
                 {

@@ -5,6 +5,9 @@
  */
 package school;
 
+import java.sql.*;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author laksh
@@ -71,7 +74,7 @@ public class add_stu extends javax.swing.JFrame {
         jLabel7.setText("Roll No.:");
 
         jLabel8.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        jLabel8.setText("Mobile Numer:");
+        jLabel8.setText("Mobile Number:");
 
         jLabel9.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
         jLabel9.setText("Address:");
@@ -207,6 +210,28 @@ public class add_stu extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conn=(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/javadbms","root","");
+            String sql="insert into Students values(?,?,?,?,?,?,?,?)";
+            
+            PreparedStatement ps=conn.prepareStatement(sql);
+            ps.setString(1,sid.getText());
+            ps.setString(2,sn.getText());
+            ps.setString(3,sfn.getText());
+            ps.setString(4,smn.getText());
+            ps.setString(5,sc.getText());
+            ps.setString(6,srn.getText());
+            ps.setString(7,smob.getText());
+            ps.setString(8,sadd.getText());
+            
+            ps.executeUpdate();
+            JOptionPane.showMessageDialog(null,"Data recorded successfully");
+            conn.close();
+            
+        }catch (Exception e){
+            JOptionPane.showMessageDialog(null,e);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

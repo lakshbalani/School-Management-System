@@ -43,9 +43,9 @@ public class Students extends javax.swing.JFrame {
 
         jLabel2.setText("Add new student");
 
-        jLabel3.setText("Find and edit students details");
+        jLabel3.setText("Edit students details");
 
-        jLabel4.setText("Delete student record");
+        jLabel4.setText("Find and Delete student record");
 
         jButton1.setText("Enter");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -88,7 +88,7 @@ public class Students extends javax.swing.JFrame {
                         .addComponent(jButton3))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 115, Short.MAX_VALUE)
                         .addComponent(jButton2))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addComponent(jLabel2)
@@ -131,18 +131,21 @@ public class Students extends javax.swing.JFrame {
         // TODO add your handling code here:
         add_stu obj=new add_stu();
         obj.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         fne_stu obj=new fne_stu();
         obj.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         del_stu obj=new del_stu();
         obj.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
